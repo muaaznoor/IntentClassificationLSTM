@@ -5,9 +5,7 @@
 For this project, we elect to use total classification accuracy as our evaluation metric. Because we are attempting to implement models that correctly classify input sequences into multiple intent classification labels, we require a metric that reports our overall performance toward this goal.
 
 This metric allows us to measure the proportion of inputs which our models classify correctly across all classes. It is calculated using the simple formula below:
-Total Classification Accuracy =(\sum_(i=1)^n\ 1{y\ \widehat_i\ \ =\ y_i})/n
-
-<img src="http://www.sciweavers.org/tex2img.php?eq=%3D%5Cfrac%7B%5Csum_%7Bi%3D1%7D%5En%201%5C%7B%5Chat%7By_i%7D%20%5C%20%3D%5C%20y_i%5C%7D%7D%7Bn%7D&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="=\frac{\sum_{i=1}^n 1\{\hat{y_i} \ =\ y_i\}}{n}" width="157" height="47" />
+Total Classification Accuracy =<img src="http://www.sciweavers.org/tex2img.php?eq=%3D%5Cfrac%7B%5Csum_%7Bi%3D1%7D%5En%201%5C%7B%5Chat%7By_i%7D%20%5C%20%3D%5C%20y_i%5C%7D%7D%7Bn%7D&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="=\frac{\sum_{i=1}^n 1\{\hat{y_i} \ =\ y_i\}}{n}" width="157" height="47" />
 
 This metric has been successfully used in a wide variety of multiclass classification studies, including the below study linked in the footnotes[1] which performs multiclass classification of intent using LSTM architectures.
 
