@@ -30,7 +30,7 @@ We have the following LSTM equations:
 
 <img src="http://www.sciweavers.org/tex2img.php?eq=f_t%3D%5Csigma%28W_%7Bif%7D%5C%20x_t%2Bb_%7Bif%7D%2BW_%7Bhf%7D%5C%20h_%7B%28t-1%29%7D%2Bb_%7Bhf%7D%29&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="f_t=\sigma(W_{if}\ x_t+b_{if}+W_{hf}\ h_{(t-1)}+b_{hf})" width="303" height="21" />
 
-<img src="http://www.sciweavers.org/tex2img.php?eq=f_t%3D%5Csigma%28W_%7Bio%7D%5C%20x_t%2Bb_%7Bio%7D%2BW_%7Bho%7D%5C%20h_%7B%28t-1%29%7D%2Bb_%7Bho%7D%29&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="f_t=\sigma(W_{io}\ x_t+b_{io}+W_{ho}\ h_{(t-1)}+b_{ho})" width="311" height="21" />
+<img src="http://www.sciweavers.org/tex2img.php?eq=o_t%3D%5Csigma%28W_%7Bio%7D%5C%20x_t%2Bb_%7Bio%7D%2BW_%7Bho%7D%5C%20h_%7B%28t-1%29%7D%2Bb_%7Bho%7D%29%E3%80%97_&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="o_t=\sigma(W_{io}\ x_t+b_{io}+W_{ho}\ h_{(t-1)}+b_{ho})〗_" width="314" height="21" />
 
 <img src="http://www.sciweavers.org/tex2img.php?eq=c_t%3Df_t%5Codot%5C%20c_%7Bt-1%7D%2Bi_t%5Codot%20g_t&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="c_t=f_t\odot\ c_{t-1}+i_t\odot g_t" width="182" height="19" />
 
