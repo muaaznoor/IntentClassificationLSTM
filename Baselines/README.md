@@ -38,7 +38,7 @@ We have the following LSTM equations:
 where we have:
 
 <img src="http://www.sciweavers.org/tex2img.php?eq=h_t&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="h_t" width="21" height="18" />: hidden state at time t
-c_t: cell state at time t
+c: cell state at time t
 x_t: input at time t
 h_{t-1}: hidden state at time t-1
 i_t: input gate
