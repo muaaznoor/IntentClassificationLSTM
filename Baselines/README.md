@@ -25,8 +25,7 @@ As a result, we tried to explore a better but still naive baseline by running a 
 The strong baseline model takes in tokenized user utterances, gets their Glove embeddings, passes them through a bidirectional LSTM and fully connected layers, and outputs the predictions of intent.
 
 We have the following LSTM equations:
-
-<img src="http://www.sciweavers.org/tex2img.php?eq=f_t%3D%5Csigma%28W_%7Bii%7D%5C%20x_t%2Bb_%7Bii%7D%2BW_%7Bhi%7D%5C%20h_%7B%28t-1%29%7D%2Bb_%7Bhi%7D%29&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="i_t=\sigma(W_{ii}\ x_t+b_{ii}+W_{hi}\ h_{(t-1)}+b_{hi})" width="294" height="21" />
+<img src="http://www.sciweavers.org/tex2img.php?eq=i_t%3D%5Csigma%28W_%7Bii%7D%5C%20x_t%2Bb_%7Bii%7D%2BW_%7Bhi%7D%5C%20h_%7B%28t-1%29%7D%2Bb_%7Bhi%7D%29&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="i_t=\sigma(W_{ii}\ x_t+b_{ii}+W_{hi}\ h_{(t-1)}+b_{hi})" width="292" height="21" />
 
 <img src="http://www.sciweavers.org/tex2img.php?eq=f_t%3D%5Csigma%28W_%7Bif%7D%5C%20x_t%2Bb_%7Bif%7D%2BW_%7Bhf%7D%5C%20h_%7B%28t-1%29%7D%2Bb_%7Bhf%7D%29&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="f_t=\sigma(W_{if}\ x_t+b_{if}+W_{hf}\ h_{(t-1)}+b_{hf})" width="303" height="21" />
 
@@ -42,12 +41,19 @@ h_t: hidden state at time t
 c_t: cell state at time t
 
 x_t: input at time t
+
 h_{t-1}: hidden state at time t-1
+
 i_t: input gate
+
 f_t: forget fate
+
 g_t: cell gate
+
 o_t: output gate
+
 \sigma(...): sigmoid activation function
+
 \odot: Hadamard product
 
 We use a batch size of 128, a learning rate of 0.01, and trained for 10 epochs. The strong baseline LSTM model produces a testing accuracy of around 85.5%, which is already decent but still gives us some room for improvement by doing extensions.
