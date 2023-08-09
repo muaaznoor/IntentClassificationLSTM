@@ -37,8 +37,10 @@ We have the following LSTM equations:
 <img src="http://www.sciweavers.org/tex2img.php?eq=h_t%3Do_t%5Codot%5Ctanh%28c_t%29&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="h_t=o_t\odot\tanh(c_t)" width="149" height="18" />
 where we have:
 
-<img src="http://www.sciweavers.org/tex2img.php?eq=h_t&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="h_t" width="21" height="18" />: hidden state at time t
-c: cell state at time t
+h_t: hidden state at time t
+
+c_t: cell state at time t
+
 x_t: input at time t
 h_{t-1}: hidden state at time t-1
 i_t: input gate
