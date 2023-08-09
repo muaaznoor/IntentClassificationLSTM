@@ -25,6 +25,7 @@ As a result, we tried to explore a better but still naive baseline by running a 
 The strong baseline model takes in tokenized user utterances, gets their Glove embeddings, passes them through a bidirectional LSTM and fully connected layers, and outputs the predictions of intent.
 
 We have the following LSTM equations:
+
 <img src="http://www.sciweavers.org/tex2img.php?eq=i_t%3D%5Csigma%28W_%7Bii%7D%5C%20x_t%2Bb_%7Bii%7D%2BW_%7Bhi%7D%5C%20h_%7B%28t-1%29%7D%2Bb_%7Bhi%7D%29&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="i_t=\sigma(W_{ii}\ x_t+b_{ii}+W_{hi}\ h_{(t-1)}+b_{hi})" width="292" height="21" />
 
 <img src="http://www.sciweavers.org/tex2img.php?eq=f_t%3D%5Csigma%28W_%7Bif%7D%5C%20x_t%2Bb_%7Bif%7D%2BW_%7Bhf%7D%5C%20h_%7B%28t-1%29%7D%2Bb_%7Bhf%7D%29&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="f_t=\sigma(W_{if}\ x_t+b_{if}+W_{hf}\ h_{(t-1)}+b_{hf})" width="303" height="21" />
@@ -36,24 +37,6 @@ We have the following LSTM equations:
 <img src="http://www.sciweavers.org/tex2img.php?eq=h_t%3Do_t%5Codot%5Ctanh%28c_t%29&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="h_t=o_t\odot\tanh(c_t)" width="149" height="18" />
 where we have:
 
-h_t: hidden state at time t
-
-c_t: cell state at time t
-
-x_t: input at time t
-
-h_{t-1}: hidden state at time t-1
-
-i_t: input gate
-
-f_t: forget fate
-
-g_t: cell gate
-
-o_t: output gate
-
-\sigma(...): sigmoid activation function
-
-\odot: Hadamard product
+<img src="http://www.sciweavers.org/tex2img.php?eq=%5Cbegin%7Bflushleft%7D%0Ah_t%3A%20%5Ctext%7Bhidden%20state%20at%20time%20t%7D%0A%5C%5Cc_t%3A%20%5Ctext%7Bcell%20state%20at%20time%20t%7D%5C%5C%0Ax_t%3A%20%5Ctext%7Binput%20at%20time%20t%7D%5C%5C%0Ah_%7Bt-1%7D%3A%20%5Ctext%7Bhidden%20state%20at%20time%20t-1%7D%5C%5C%0Ai_t%3A%20%5Ctext%7Binput%20gate%7D%5C%5C%0Af_t%3A%20%5Ctext%7Bforget%20fate%7D%5C%5C%0Ag_t%3A%20%5Ctext%7Bcell%20gate%7D%5C%5C%0Ao_t%3A%20%5Ctext%7Boutput%20gate%7D%5C%5C%0A%5Csigma%28...%29%3A%20%5Ctext%7Bsigmoid%20activation%20function%7D%5C%5C%0A%5Codot%3A%20%5Ctext%7BHadamard%20product%7D%0A%5Cend%7Bflushleft%7D&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="\begin{flushleft}h_t: \text{hidden state at time t}\\c_t: \text{cell state at time t}\\x_t: \text{input at time t}\\h_{t-1}: \text{hidden state at time t-1}\\i_t: \text{input gate}\\f_t: \text{forget fate}\\g_t: \text{cell gate}\\o_t: \text{output gate}\\\sigma(...): \text{sigmoid activation function}\\\odot: \text{Hadamard product}\end{flushleft}" width="285" height="200" />
 
 We use a batch size of 128, a learning rate of 0.01, and trained for 10 epochs. The strong baseline LSTM model produces a testing accuracy of around 85.5%, which is already decent but still gives us some room for improvement by doing extensions.
