@@ -7,6 +7,8 @@ For this project, we elect to use total classification accuracy as our evaluatio
 This metric allows us to measure the proportion of inputs which our models classify correctly across all classes. It is calculated using the simple formula below:
 Total Classification Accuracy =(\sum_(i=1)^n\ 1{y\ \widehat_i\ \ =\ y_i})/n
 
+https://latex.codecogs.com/svg.image?=(%5Csum_(i=1)%5En%5C;1%7By%5C;%5Cwidehat_i%5C;%5C=%5Cy_i%7D)/n
+
 This metric has been successfully used in a wide variety of multiclass classification studies, including the below study linked in the footnotes[1] which performs multiclass classification of intent using LSTM architectures.
 
 A description of this accuracy metric for multiclass classification can be found in this Wikipedia article.
